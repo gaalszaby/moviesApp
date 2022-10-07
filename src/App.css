@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap");
+
+html,
+body {
+  font-family: Oswald, sans-serif;
+  background: #141e30;
+  background: -webkit-linear-gradient(
+    to top,
+    #141e30,
+    #243b55
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #141e30, #243b55);
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.App {
+  max-width: 80%;
+  margin: 5rem auto;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+.popular-movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.movie-img {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.movie-title {
+  font-size: 1.1rem;
+  color: white;
+  text-align: center;
+}
+
+.filter-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-container button {
+  min-width: 5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  color: rgb(65, 98, 168);
+  border-radius: 1rem;
+  border: 2px solid rgb(65, 98, 168);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background: rgb(200, 218, 255);
+}
+
+.filter-container button.active {
+  background: rgb(65, 98, 168);
+  color: white;
+}
+
+.filter-container button.active:hover {
+  background: rgb(65, 98, 168);
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
